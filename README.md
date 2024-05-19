@@ -1,7 +1,5 @@
 LIBRARY MANAGEMENT (BOOKS) Documentation
 
-<p>Jika Bapak/Ibu mengunakan database yang telah saya buat sebelumnya maka akan ada 2 akun yang terseida berikut : </p>
-
 <h2>Client Setup</h2>
 <hr>
 <br>
