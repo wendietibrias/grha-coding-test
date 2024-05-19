@@ -1,5 +1,8 @@
 LIBRARY MANAGEMENT (BOOKS) Documentation
 
+<p>Bapak/Ibu jika mengunakan database yang telah saya export maka Bapak/Ibu dapat mengunakan akun berikut ini : </p>
+<p> email: wendi@gmail.com, password: wendi#123</p>
+
 <h2>Client Setup</h2>
 <hr>
 <br>
