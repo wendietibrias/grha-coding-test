@@ -1,0 +1,57 @@
+@import "../../../styles/core.scss";
+
+.register-form-container {
+    max-width:650px;
+    width:100%;
+    background-color:$white-clr;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    padding:1.7rem 2rem;
+    border-radius:12px;
+
+    .register-title-container {
+        h3 {
+            font-size:1.3rem;
+        }
+
+         p {
+            color:$secondary-text-clr;
+            font-size:0.85rem;
+            margin:0.2rem 0 0;
+         }
+     }
+
+     .register-form {
+        display: flex;
+        flex-direction: column;
+        row-gap:0.5rem;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap:0.7rem;
+        margin-top:1.8rem;
+
+        @media screen and (max-width:560px) {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+         .button-item {
+             grid-column:1/3;
+
+             @media screen and (max-width:560px) {
+                grid-column: 1/1;
+            }
+         }
+     }
+
+     .action-redirect {
+        text-align:center;
+        font-size:0.85rem;
+        color:$secondary-text-clr;
+ 
+         a {
+           color:$primary-clr;
+           font-weight:600;
+         }
+      }
+ 
+
+}

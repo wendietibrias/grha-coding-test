@@ -1,0 +1,224 @@
+@import "./variable.scss";
+
+/* Form component style */
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  label {
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: $primary-text-clr;
+  }
+
+  input {
+    padding: 0.7rem;
+    border-radius: 4px;
+    border: solid 1px $secondary-text-clr;
+
+    &.err {
+      border: solid 1px $primary-clr;
+    }
+  }
+
+  textarea {
+    padding: 0.7rem;
+    border-radius: 4px;
+    border: solid 1px $secondary-text-clr;
+    resize: none;
+
+    &.err {
+      border: solid 1px $primary-clr;
+    }
+  }
+
+  .validation-fail {
+    color: $primary-clr;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+.button-item {
+  width: 100%;
+  background-color: $primary-clr;
+  color: $white-clr;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* alert components */
+
+.alert-container {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+
+  &.error {
+    background-color: $alert-error-clr;
+    color: #f43f5e;
+  }
+
+  &.success {
+    background-color: $alert-success-clr;
+    color: #16a34a;
+  }
+
+  .alert-message-container {
+    p {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* sidebar component style */
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: $white-clr;
+  padding: 1.5rem;
+  z-index:99999;
+  transition: all 0.35s ease;
+
+  @media screen and (max-width: 980px) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  header {
+    .company-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 2rem;
+      color: $primary-clr;
+      column-gap: 1rem;
+
+      @media screen and (max-width: 560px) {
+        font-size: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.45rem;
+
+        @media screen and (max-width: 560px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .sidebar-links-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    row-gap: 1.3rem;
+
+    .sidebar-link-item {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      text-decoration: none;
+      color: $secondary-text-clr;
+      font-size: 0.86rem;
+      font-weight: 500;
+
+      &.active {
+        color: $primary-clr;
+      }
+
+      i {
+        font-size: 1.4rem;
+      }
+    }
+
+    .logout-button {
+      width: 100%;
+      text-align: left;
+      color: $secondary-text-clr;
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      font-weight: 500;
+
+      i {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+/* navbar component style */
+
+.navbar-container {
+  width: 100%;
+  background-color: $white-clr;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-burger {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 980px) {
+      display: block;
+    }
+  }
+
+  .user-info-container {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    .avatar-user {
+      width: 40px;
+      height: 40px;
+      font-weight: 600;
+      border-radius: 100px;
+      background-color: $primary-clr;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white-clr;
+    }
+
+    .user-info {
+      justify-self: flex-end;
+
+      @media screen and (max-width: 560px) {
+        display: none;
+      }
+
+      h6 {
+        color: $secondary-text-clr;
+        font-weight: 400;
+      }
+    }
+  }
+}

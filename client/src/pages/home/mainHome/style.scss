@@ -1,0 +1,11 @@
+
+.home-container {
+    display: flex;
+    align-items: flex-start;
+
+     .main-content {
+        flex:1;
+        overflow-y:scroll;
+        height:100vh;
+     }
+}

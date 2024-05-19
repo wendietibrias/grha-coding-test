@@ -1,0 +1,50 @@
+@import "../../../styles/core.scss";
+
+.login-form-container{
+    max-width:630px;
+    width:100%;
+    background-color:$white-clr;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    padding:1.7rem 2rem;
+    border-radius:12px;
+   
+
+     .login-title-container {
+        h3 {
+            font-size:1.3rem;
+
+            @media screen and (max-width:560px) {
+               font-size:1rem;
+            }
+        }
+
+         p {
+            color:$secondary-text-clr;
+            font-size:0.85rem;
+            margin:0.2rem 0 0;
+
+            @media screen and (max-width:560px) {
+               font-size:0.85rem;
+            }
+         }
+     }
+
+     .login-form {
+        display: flex;
+        flex-direction: column;
+        row-gap:0.7rem;
+        margin-top:1.8rem;
+     }
+
+     .action-redirect {
+       text-align:center;
+       font-size:0.85rem;
+       color:$secondary-text-clr;
+
+        a {
+          color:$primary-clr;
+          font-weight:600;
+        }
+     }
+
+}

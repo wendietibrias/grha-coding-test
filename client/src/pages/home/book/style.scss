@@ -1,0 +1,123 @@
+@import "../../../styles/core.scss";
+
+.not-found-container,
+.loading-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:2rem;
+
+
+}
+
+.book-container {
+  padding: 1.5rem;
+
+
+  .book-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    @media screen and (max-width:980px) {
+      grid-template-columns: repeat(3,1fr);
+   }
+
+   @media screen and (max-width:780px) {
+    grid-template-columns: repeat(2,1fr);
+ }
+
+    @media screen and (max-width:560px) {
+       grid-template-columns: repeat(1,1fr);
+    }
+
+    .book-card-item {
+      width: 100%;
+      background-color: $white-clr;
+      padding: 0.8rem;
+      border-radius: 6px;
+
+
+      .book-cover {
+        img {
+          border-radius: 6px;
+          width: 100%;
+          height:300px;
+          object-fit: fill;
+        }
+      }
+
+      .book-description {
+         margin-top:0.5rem;
+
+        h4 {
+          width:200px;
+          font-size: 0.85rem;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-weight: 600;
+          overflow:hidden;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: $secondary-text-clr;
+        }
+      }
+
+      .book-action {
+        display: flex;
+        align-items: center;
+        column-gap:0.5rem;
+
+        .book-action-delete,
+        .book-action-detail,
+        .book-action-update {
+          font-size: 0.76rem;
+          flex: 1;
+          color:$white-clr;
+          padding:0.2rem;
+          border-radius:6px;
+          font-weight: 500;
+          text-decoration: none;
+          text-align: center;
+        }
+
+        .book-action-delete {
+          background-color: $primary-clr;
+        }
+
+        .book-action-update {
+         background-color: #16a34a;
+        }
+
+        .book-action-detail {
+          background-color: #54a0ff;
+        }
+      }
+    }
+  }
+
+  .fetch-page-spinner {
+     width:100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .load-more-container {
+     display: flex;
+     justify-content: center;
+     margin:1.5rem 0 0;
+     align-self:flex-end;
+
+      button {
+        background-color: $primary-clr;
+        color:$white-clr;
+        font-size:0.85rem;
+        padding:0.6rem 1rem;
+        border-radius: 6px;
+      }
+  }
+}

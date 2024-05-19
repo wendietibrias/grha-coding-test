@@ -1,0 +1,153 @@
+@import "../../../styles/core.scss";
+
+.not-found-container,
+.loading-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:2rem;
+}
+
+.category-container {
+  padding: 1.5rem;
+  position: relative;
+
+
+  .category-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(12, 12, 12, 0.5);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      color: $white-clr;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .category-modal-form-container {
+      width: 550px;
+      background-color: $white-clr;
+      padding: 1.5rem;
+      border-radius: 12px;
+
+      .category-modal-form {
+        width: 100%;
+      }
+    }
+  }
+
+  .category-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    h3 {
+      @media screen and (max-width:420px) {
+         font-size:0.9rem;
+      }
+   }
+
+    .add-category-button {
+      font-weight: 600;
+      color: $primary-clr;
+   
+      @media screen and (max-width:420px) {
+         font-size:0.8rem;
+      }
+  
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+
+  .category-container-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+
+    @media screen and (max-width: 980px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 560px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 420px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .category-item {
+      background-color: $white-clr;
+      padding: 1rem;
+
+      .category-action {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+
+        .book-action-delete,
+        .book-action-detail,
+        .book-action-update {
+          font-size: 0.76rem;
+          flex: 1;
+          color: $white-clr;
+          padding: 0.2rem;
+          border-radius: 4px;
+          font-weight: 500;
+          text-decoration: none;
+          text-align: center;
+        }
+
+        .book-action-delete {
+          background-color: $primary-clr;
+        }
+
+        .book-action-update {
+          background-color: #16a34a;
+        }
+
+        .book-action-detail {
+          background-color: #54a0ff;
+        }
+      }
+    }
+  }
+  
+  .fetch-page-spinner {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin:2rem 0 0;
+
+     button {
+       background-color: $primary-clr;
+       color:$white-clr;
+       font-size:0.85rem;
+       padding:0.6rem 1rem;
+       border-radius: 6px;
+     }
+ }
+}
