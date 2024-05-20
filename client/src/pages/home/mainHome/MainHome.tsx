@@ -1,14 +1,23 @@
 import "./style.scss";
-import { Navigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import { Sidebar,Navbar } from "../../../components";
 import useAuth,{ IUseAuth } from "../../../hooks/useAuth";
+import { useEffect } from "react";
 
 const MainHome = () => {
-    const { token,user } = useAuth() as IUseAuth;
+    const { token,user,onLogout } = useAuth() as IUseAuth;
+    const navigate = useNavigate();
+ 
+    useEffect(() => {
+        if(!token) {
+          navigate("/auth");
+        } 
 
-    if(!token || (user?.exp && user.exp * 1000 < new Date().getTime())) {
-        return <Navigate to="/auth"/>
-    }
+        if((user?.exp && user.exp * 1000 < new Date().getTime())) {
+            onLogout();
+        }
+    
+    }, [token])
 
     return (
         <section className="home-container">
